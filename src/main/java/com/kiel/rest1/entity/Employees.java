@@ -1,5 +1,7 @@
 package com.kiel.rest1.entity;
 
+import java.util.UUID;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,9 +27,12 @@ public @Data class Employees {
 
     private String uuid;
 
+    @Column(name = "email", nullable = false)
     private String email;
 
-    public Employees() {
+    private String word;
 
+    public Employees() {
+        this.uuid = UUID.randomUUID().toString();
     }
 }

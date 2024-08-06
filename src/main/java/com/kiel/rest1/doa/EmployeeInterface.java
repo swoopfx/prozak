@@ -10,5 +10,9 @@ public interface EmployeeInterface {
 
     public List<Employees> getEmployees();
 
-    Employees findOneEmployee(int id);
+    List<Employees> findOneEmployee(int id);
+
+    Employees findById(int id);
+
+    Employees save(Employees emp);
 }
